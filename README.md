@@ -4,7 +4,7 @@ This code is a simplified implementation of the rules for UK vehicle tax as of 2
 
 ## The rules for use in the exercises are summarized below:
 
-### Story 1
+### Story One
 
 ##### First tax payment when you register the vehicle
 
