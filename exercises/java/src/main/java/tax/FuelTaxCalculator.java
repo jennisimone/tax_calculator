@@ -13,15 +13,15 @@ class FuelTaxCalculator extends TaxCalculator {
         Period year = Period.ofYears(1);
 
         if(vehicle.getDateOfFirstRegistration().isBefore(LocalDate.now().minus(year)) && secondTaxPayment){
-           if(vehicle.listPrice >= 40000){
-               if(vehicle.FuelType == FuelType.ELECTRIC){
+           if(vehicle.getListPrice() >= 40000){
+               if(vehicle.getFuelType() == FuelType.ELECTRIC){
                     return 310;
                }
-               else if(vehicle.FuelType == FuelType.ALTERNATIVE_FUEL){
+               else if(vehicle.getFuelType() == FuelType.ALTERNATIVE_FUEL){
                     return 440;
                }
                else{
-                    return 450
+                    return 450;
                }
            }
            else{
