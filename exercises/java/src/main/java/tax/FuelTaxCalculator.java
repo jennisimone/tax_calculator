@@ -5,7 +5,6 @@ class FuelTaxCalculator extends TaxCalculator {
     @Override
     int calculateTax(Vehicle vehicle) {
 
-AlternativeFuelTypes
         if (vehicle.getFuelType().equals(FuelType.ALTERNATIVE_FUEL)) {
             if (vehicle.getCo2Emissions() == 0) return 0;
             else if (vehicle.getCo2Emissions() <= 50) return 0;
