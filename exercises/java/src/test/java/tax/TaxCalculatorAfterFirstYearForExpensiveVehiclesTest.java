@@ -18,7 +18,8 @@ public class TaxCalculatorAfterFirstYearForExpensiveVehiclesTest {
 
     @Before
     public void setUp() {
-        taxCalculator = new FuelTaxCalculator();
+        taxCalculator = new FuelTaxCalculator(true);
+
     }
 
     @Test
