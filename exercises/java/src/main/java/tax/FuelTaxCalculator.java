@@ -5,14 +5,14 @@ import java.time.Period;
 
 class FuelTaxCalculator extends TaxCalculator {
 
-    boolean secondTaxPayment = true;
+    private boolean secondTaxPayment = true;
 
     @Override
     int calculateTax(Vehicle vehicle) {
 
         Period year = Period.ofYears(1);
 
-        if (vehicle.getDateOfFirstRegistration().isBefore(LocalDate.now().minus(year))) {
+        if (vehicle.getDateOfFirstRegistration().isBefore(LocalDate.now().minus(year)) && secondTaxPayment) {
             if (vehicle.getFuelType().equals(FuelType.ALTERNATIVE_FUEL)) {
                 return 130;
             } else if (vehicle.getFuelType().equals(FuelType.ELECTRIC)) {
